@@ -46,9 +46,11 @@
     </nav>
     <!-- header End -->
     <!-- background image start -->
-    <div class="container-fluid d-flex align-content justify-content-center p-0 background_image">
-        <h1 class="pt-5  text-light">LEADERS IN QUALITY <br /> CONSTRUCTION AND <br /> INFRASTRUCTURE</h1>
-
+    <div
+        class="container-fluid d-flex flex-column align-items-center justify-content-center text-center background_image">
+        <h1 class="pt-5 px-3 text-light fw-bold responsive-heading">
+            LEADERS IN QUALITY <br /> CONSTRUCTION AND <br /> INFRASTRUCTURE
+        </h1>
     </div>
     <!-- background image end -->
     <!-- SERVICES start -->
@@ -136,33 +138,29 @@
     </div>
     <!-- SERVICES End -->
     <!-- ABOUT start -->
-    <div class="container-fluid about_background_image  pb-4" id="ABOUT">
-        <div class="container-fluid about_background_image_second p-0">
-            <div class="row w-50 ">
-                <div class="col mt-4">
-                    <div class="bg-light">
-
-
-                        <h1 class="text-center py-3 my-4 servsices_border  ">About</h1>
-                        <p class="w-75 text-start mx-auto pb-4 ">Sphere Constructions is a world-leading construction
-                            and building services company that completes in excess of $5 billion worth of contracts
-                            annually, in every market sector and across the globe. Over the last 69 years, we’ve grown
-                            from being a general contractor to a multi-faceted company that can deliver any aspect of a
-                            project.</p>
-                        <p class="w-75 text-start mx-auto ">Well known as an expert in “earth moving”, it was no
-                            surprise that we found success in site clearing operations. Various locations, including the
-                            Antigonish Regional Mall site, the Georgia Pacific Gypsum site in Port Hawkesbury, Louisiana
-                            Pacific site at Point Tupper and the Burnside Industrial Park site in Dartmouth, the new
-                            Dartmouth Crossing IKEA site, among many others, have all benefited from our competency,
-                            skills and meticulous attention to detail.</p>
-                    </div>
+    <div class="container-fluid about_background_image pb-4" id="ABOUT">
+    <div class="container-fluid about_background_image_second p-0">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 mt-4">
+                <div class="bg-light p-4 rounded shadow-sm">
+                    <h1 class="text-center py-3 my-3 servsices_border">About</h1>
+                    <p class="text-start mx-auto about-text">
+                        Sphere Constructions is a world-leading construction and building services company that completes 
+                        in excess of $5 billion worth of contracts annually, in every market sector and across the globe. 
+                        Over the last 69 years, we’ve grown from being a general contractor to a multi-faceted company 
+                        that can deliver any aspect of a project.
+                    </p>
+                    <p class="text-start mx-auto about-text">
+                        Well known as an expert in “earth moving”, it was no surprise that we found success in site clearing 
+                        operations. Various locations, including the Antigonish Regional Mall site, the Georgia Pacific Gypsum 
+                        site in Port Hawkesbury, Louisiana Pacific site at Point Tupper, and the Burnside Industrial Park site 
+                        in Dartmouth, have all benefited from our competency, skills, and meticulous attention to detail.
+                    </p>
                 </div>
-
-
             </div>
-
         </div>
     </div>
+</div>
     <!-- ABOUT end -->
     <!-- our senior team start -->
     <div class="container-fluid">
@@ -388,37 +386,33 @@
         </h1>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="">
+                <div class="map-container">
                     <iframe class="my_map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345090745!2d144.9537353153168!3d-37.816279742021974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5772f9ddf6f91a9!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1600334463728!5m2!1sen!2sau"
-                        height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                        allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
 
             </div>
-            <div class="row row-cols-2 justify-content-between px-5">
+            <div class="row row-cols-1 row-cols-md-2 justify-content-between px-3 px-md-5">
                 <div class="col contact_query">
                     <h5 class="pt-4">Inquiries</h5>
-
                     <p class="contact_p_tag">
-
-                        For any inquiries, questions or commendations, email contact@sphereconstructions.com or fill out
-                        the
-                        following form.
+                        For any inquiries, questions or commendations, email
+                        <a href="mailto:contact@sphereconstructions.com">contact@sphereconstructions.com</a>
+                        or fill out the following form.
                     </p>
                 </div>
                 <div class="col contact_query">
-                    <h5 class="pt-4">Employment
-                    </h5>
-
+                    <h5 class="pt-4">Employment</h5>
                     <p class="contact_p_tag">
-
-                        To apply for a job with Sphere Constuctions, please send a cover letter together with your C.V.
-                        to contact@sphereconstructions.com
+                        To apply for a job with Sphere Constructions, please send a cover letter together with your C.V.
+                        to
+                        <a href="mailto:contact@sphereconstructions.com">contact@sphereconstructions.com</a>.
                     </p>
                 </div>
-
             </div>
+
 
         </div>
     </div>
@@ -430,26 +424,14 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script>
+    const car = { type: "Fiat", model: "500", color: "white" };
 
-    // Get the current URL
-    const url = new URL(window.location.href);
-
-    console.log(url.hash)
-    // Extract the `id` parameter
-    const id = url.hash.substring(1); // Remove the '#' symbol
-
-    const activeElement = document.getElementById(id);
-    if (activeElement) {
-        // Remove active class from all elements
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-
-        // Add active class to the matching element
-        activeElement.classList.add('active');
-    }
-
+    car.type = "7 seater"
+    car.model = "2007"
+    car["color"] = "red"
+    console.log(car)
 </script>
+
 
 
 </html>
